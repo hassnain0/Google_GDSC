@@ -1,0 +1,36 @@
+package com.example.fiver_project;
+import javafx.event.ActionEvent;
+import javafx.scene.Node;
+import javafx.scene.image.Image;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.io.IOException;
+
+public class
+
+
+           HelloApplication extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),591,591 );
+
+        //Setting an icon
+       Image myIcon=new Image("EPP Film Production Company - Transparent background.png");
+
+       stage.getIcons().add(myIcon);
+       stage.setTitle("EPP Film Production Company");
+        stage.setScene(scene);
+        stage.show();
+        stage.setResizable(false);
+    }
+
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
