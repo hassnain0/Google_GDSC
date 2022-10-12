@@ -1,0 +1,133 @@
+package com.example.fiver_project;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.File;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
+
+public  class UserInput {
+
+    private String Name;
+    public String myDatePicker;
+    public String Reference;
+
+    public String Project;
+    public String Description;
+    public ImageView ImageView;
+
+    public String Reservation;
+    public String Style;
+
+
+
+    public UserInput(String Name,String localDate,  String Style, String Description,String Reference, String Project, String ImageView, String Reservation) {
+
+        this.Name = Name;
+        this.Description = Description;
+        this.Project = Project;
+        this.Style = Style;
+        this.Reference =Reference;
+        this.myDatePicker=localDate;
+        this.Reservation=Reservation;
+        this.ImageView=new ImageView(new Image(ImageView));
+    }
+
+
+    //For setting a name
+    public void setName(String name) {
+        this.Name = name;
+    }
+
+     //For setting Reservation
+         public void SetReservation(String Reservation){
+           this.Reservation=Reservation;
+         }
+
+    //For Setting date
+    public void SetDate(String datePicker) {
+
+        this.myDatePicker =datePicker;
+    }
+
+    //For Setting Reference
+
+    public void SetReference(String reference) {
+        this.Reference = reference;
+    }
+
+    //
+    //For setting project
+    public void setProject(String project) {
+        this.Project = project;
+    }
+//
+    //For setting Description
+
+    public void setDescription(String description) {
+        this.Description = String.valueOf(description.lines());
+    }
+
+
+    public void setStyle(String style) {
+        this.Style = style;
+
+    }
+    public void setImageView(ImageView imageView){
+            this.ImageView = imageView;
+    }
+
+
+    //Getters
+    public String getReservation(){
+        return Reservation;
+    }
+
+    public ImageView getImageView(){
+    return         ImageView;
+
+    }
+
+        //Getting a name
+    public String getName() {
+        return Name;
+    }
+
+
+    //For getting date
+    public String getDate() {
+
+        return myDatePicker;
+    }
+
+    //For getting Reference
+
+    public Integer getReference() {
+
+        System.out.println(Reference);
+        return Integer.parseInt(Reference);
+    }
+
+    //    //For getting project
+    public String getProject() {
+        return Project;
+    }
+
+    //For getting Description
+
+    public String getDescription() {
+        return Description;
+    }
+
+
+    //  For getting style
+    public String getStyle() {
+        return Style;
+
+    }
+}
+
